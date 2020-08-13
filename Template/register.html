@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng k&#253;</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700&amp;subset=vietnamese" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="Content/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Content/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="Content/css/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="Content/css/nouislider.min.css" />
+    <link type="text/css" rel="stylesheet" href="Content/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="Content/css/style.css" />
+    <link rel="shortcut icon" href="Content/img/icon.png" />
+    <script src="Content/js/jquery.min.js"></script>
+    <script src="/Areas/Admin/Content/assets/libs/js/sweetalert2.min.js"></script>
+    <link href="/Areas/Admin/Content/assets/libs/css/sweetalert2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="top-header">
+            <div class="container">
+                <div class="pull-left">
+                    <span>Chào mừng đến với QTC Store</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="header-top-links">
+                        <li><a href="/Product/Build">Xây dựng cấu hình</a></li>
+                        <li><a href="/Home/Faq">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div class="container">
+                <div class="pull-left dp-flex">
+                    <div class="header-logo">
+                        <a class="logo" href="/">
+                            <img src="/Areas/Admin/Uploads/images/1logoes02265726122018.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="header-search">
+                        <form action="/Product/Search" method="post">
+                            <input name="__RequestVerificationToken" type="hidden" value="mJNIRV8fTIGzcvc1aQOUzXY9TQjimq5tCuUcWdZMMlkE1lLuOXbXGNCralmvTdabaM6o3wMZpKOfvrfgboCbPt1X95p8XEJzNQwn9ximgps1" />
+                            <input class="input search-input" name="ProductName" type="text" placeholder="Nhập từ khoá cần tìm...">
+                            <button class="search-btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <ul class="header-btns">
+                        <li class="header-account dropdown default-dropdown">
+                            <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+                                <div class="header-btns-icon">
+                                    <i class="fa fa-user-o"></i>
+                                </div>
+                                <strong class="text-uppercase">Tài khoản <i class="fa fa-caret-down"></i></strong>
+                            </div>
+                                <a href="/Customer/Login" class="text-uppercase small-font">Đăng nhập</a> / <a href="/Customer/Register" class="text-uppercase small-font">Đăng ký</a>
+                            <ul class="custom-menu">
+                                <li><a href="/Customer"><i class="fa fa-user-o"></i> Cá nhân</a></li>
+                                <li><a href="/Customer/Wishlist"><i class="fa fa-heart-o"></i> Yêu thích</a></li>
+                                <li><a href="/Customer/OrderList"><i class="fa fa-gift"></i> Đơn hàng</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-cart dropdown default-dropdown" id="shopping-cart-ajax">
+                            
+
+
+<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+    <div class="header-btns-icon">
+        <i class="fa fa-shopping-cart"></i>
+        <span class="qty">3</span>
+    </div>
+    <strong class="text-uppercase">Giỏ hàng:</strong>
+    <br>
+    <span class="small-font">20,630,000</span>
+</a>
+<div class="custom-menu">
+    <div id="shopping-cart">
+        <div class="shopping-cart-list">
+                    <div class="product product-widget">
+                        <div class="product-thumb">
+                            <img src="/Areas/Admin/Uploads/images/ProductImages/Intel/CPU/i7%208700/intel_core_i7_8700.jpg" alt="Intel Core i7 8700 / 12M / 3.2GHz / 6 nh&#226;n 12 luồng" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-price">8,350,000 <span class="qty">x 1</span></h3>
+                            <h2 class="product-name"><a href="/Product/Detail?ProductId=6">Intel Core i7 8700 / 12M / 3.2GHz / 6 nh&#226;n 12 luồng</a></h2>
+                        </div>
+                        <button class="cancel-btn" data-id="6"><i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="product product-widget">
+                        <div class="product-thumb">
+                            <img src="/Areas/Admin/Uploads/images/ProductImages/Asus/mainboard/ASUS%20Z390%20ROG%20MAXIMUS%20XI%20HERO%20LGA1151v2/ASUS%20Z390%20ROG%2001.png" alt="ASUS Z390 ROG MAXIMUS XI HERO LGA1151v2" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-price">7,990,000 <span class="qty">x 1</span></h3>
+                            <h2 class="product-name"><a href="/Product/Detail?ProductId=5">ASUS Z390 ROG MAXIMUS XI HERO LGA1151v2</a></h2>
+                        </div>
+                        <button class="cancel-btn" data-id="5"><i class="fa fa-trash"></i></button>
+                    </div>
+                    <div class="product product-widget">
+                        <div class="product-thumb">
+                            <img src="/Areas/Admin/Uploads/images/ProductImages/Corsair/RAM/Corsair16GbDDR43000/ram_dominator_platinum_1.png" alt="(16G DDR4 2x8G 3000 ) Corsair Dominator Platinum RGB" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-price">4,290,000 <span class="qty">x 1</span></h3>
+                            <h2 class="product-name"><a href="/Product/Detail?ProductId=11">(16G DDR4 2x8G 3000 ) Corsair Dominator Platinum RGB</a></h2>
+                        </div>
+                        <button class="cancel-btn" data-id="11"><i class="fa fa-trash"></i></button>
+                    </div>
+        </div>
+        <div class="shopping-cart-btns">
+            <button class="main-btn medium-font" id="show-cart">Xem giỏ hàng</button>
+            <button class="primary-btn medium-font" id="pay-cart">Thanh toán <i class="fa fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#show-cart").click(function (event) {
+            event.preventDefault();
+            window.location.href = '/Order/Index/';
+        });
+
+        $("#pay-cart").click(function (event) {
+            event.preventDefault();
+            window.location.href = '/Order/CheckOut/';
+        });
+    });
+</script>
+                        </li>
+                        <li class="nav-toggle">
+                            <button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="navigation">
+    <div class="container">
+        <div id="responsive-nav">
+            <div class="category-nav show-on-click">
+                <span class="category-header">Danh mục <i class="fa fa-list"></i></span>
+                <ul class="category-list">
+                    <li><a href='/Product/?brandId=&categoryId=1&view=&sort=&pageSize=&keyword='>Laptop & phụ kiện</a></li><li><a href='/Product/?brandId=&categoryId=2&view=&sort=&pageSize=&keyword='>Máy đồng bộ</a></li><li><a href='/Product/?brandId=&categoryId=3&view=&sort=&pageSize=&keyword='>Máy chơi game</a></li><li class='dropdown side-dropdown'><a class='dropdown-toggle' data-toggle='dropdown' aria-expanded='true'>Linh kiện máy tính<i class='fa fa-angle-right'></i></a><div class='custom-menu'><div class='row'><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=8&view=&sort=&pageSize=&keyword='>CPU</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=9&view=&sort=&pageSize=&keyword='>Mainboard</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=10&view=&sort=&pageSize=&keyword='>RAM - Bộ nhớ trong</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=11&view=&sort=&pageSize=&keyword='>Ổ cứng HDD</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=12&view=&sort=&pageSize=&keyword='>Ổ cứng SSD</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=13&view=&sort=&pageSize=&keyword='>VGA - Card màn hình</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=14&view=&sort=&pageSize=&keyword='>Monitor - Màn hình</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=15&view=&sort=&pageSize=&keyword='>Case - vỏ máy tính</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=16&view=&sort=&pageSize=&keyword='>PSU - Nguồn</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=17&view=&sort=&pageSize=&keyword='>Sound Card</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=18&view=&sort=&pageSize=&keyword='>ODD - Ổ đĩa quang</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div></div></div></li><li><a href='/Product/?brandId=&categoryId=5&view=&sort=&pageSize=&keyword='>Máy chủ & Máy trạm</a></li><li class='dropdown side-dropdown'><a class='dropdown-toggle' data-toggle='dropdown' aria-expanded='true'>Gaming Gear & Console<i class='fa fa-angle-right'></i></a><div class='custom-menu'><div class='row'><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=19&view=&sort=&pageSize=&keyword='>Bàn phím chơi game</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=20&view=&sort=&pageSize=&keyword='>Chuột chơi game</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=21&view=&sort=&pageSize=&keyword='>Ghế chơi game</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=22&view=&sort=&pageSize=&keyword='>Bàn gaming</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=23&view=&sort=&pageSize=&keyword='>Tai nghe chơi game</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=24&view=&sort=&pageSize=&keyword='>Tay cầm game</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=25&view=&sort=&pageSize=&keyword='>Bàn di chuột</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=26&view=&sort=&pageSize=&keyword='>Máy chơi game console</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=27&view=&sort=&pageSize=&keyword='>Kính thực tế ảo</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=28&view=&sort=&pageSize=&keyword='>Game bản quyền</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/Product/?brandId=&categoryId=29&view=&sort=&pageSize=&keyword='>Loa</a></h3></li></ul><hr><hr class='hidden-md hidden-lg'></div></div></div></li><li><a href='/Product/?brandId=&categoryId=7&view=&sort=&pageSize=&keyword='>Giải pháp tản nhiệt</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-nav">
+                <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+                <ul class="menu-list">
+                    <li><a href="/">Trang chủ</a></li>
+                    <li class="dropdown mega-dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Tin tức <i class="fa fa-caret-down"></i></a>
+                        <div class="custom-menu">
+                            <div class="row">
+                                <div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/New/?CatalogId=1'>Tin doanh nghiệp</a></h3></li><li><a href='/New/?CatalogId=4'>Báo cáo doanh thu</a></li><li><a href='/New/?CatalogId=5'>Tuyển dụng</a></li><li><a href='/New/?CatalogId=12'>Thông tin cửa hàng</a></li></ul><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/New/?CatalogId=2'>Tin công nghệ</a></h3></li><li><a href='/New/?CatalogId=6'>Hướng dẫn</a></li><li><a href='/New/?CatalogId=7'>Giải đáp</a></li><li><a href='/New/?CatalogId=8'>Tin tức từ các hãng</a></li></ul><hr class='hidden-md hidden-lg'></div><div class='col-md-4'><ul class='list-links'><li><h3 class='list-links-title'><a href='/New/?CatalogId=3'>Tin khuyến mãi</a></h3></li><li><a href='/New/?CatalogId=9'>Khuyến mãi tháng</a></li><li><a href='/New/?CatalogId=10'>Khuyến mãi đợt</a></li><li><a href='/New/?CatalogId=11'>Các chương trình khuyến mãi</a></li></ul><hr class='hidden-md hidden-lg'></div>
+                            </div>
+                            <div class="row hidden-sm hidden-xs">
+                                <div class="col-md-12">
+                                    <hr>
+                                    <a class="banner banner-1" href="#">
+                                        <img src="/Content/img/banner05.jpg" alt="">
+                                        <div class="banner-caption text-center">
+                                            <h2 class="white-color">SẢN PHẨM MỚI</h2>
+                                            <h3 class="white-color font-weak">GIÁ HẤP DẪN</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/Home/About">Giới thiệu</a></li>
+                    <li><a href="/Home/Feedback">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+
+
+<section id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Trang chủ</a></li>
+            <li class="active">Đăng ký</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Đăng ký tài khoản</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/Customer/DoRegister" method="POST" role="form">
+                    <input name="__RequestVerificationToken" type="hidden" value="PagKHthtRpxoA4kmyHqYz5FQevIODs8eqYVWdJWL5tzM8lVnL7vkWQ7TzQOVde1cji2L_Qi50O9RhLZ9rLcbG5G0KuQnfmHfSfi5AO8NT481" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerFullname">Họ và tên:</label>
+                                <input type="text" class="input" id="CustomerFullname" name="CustomerFullname" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerBirthday">Ngày sinh:</label>
+                                <input type="date" class="input" id="CustomerBirthday" name="CustomerBirthday" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerPassword">Mật khẩu:</label>
+                                <input type="password" class="input" id="CustomerPassword" name="CustomerPassword" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ReCustomerPassword">Nhập lại mật khẩu:</label>
+                                <input type="password" class="input" id="ReCustomerPassword" name="ReCustomerPassword" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerGender">Giới tính:</label>
+                                <select name="CustomerGender" id="CustomerGender" class="input" required="required">
+                                    <option value="">Vui lòng chọn</option>
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerEmail">Email:</label>
+                                <input type="email" class="input" id="CustomerEmail" name="CustomerEmail" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerPhone">Điện thoại:</label>
+                                <input type="text" class="input" id="CustomerPhone" name="CustomerPhone" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CustomerAddress">Địa chỉ:</label>
+                                <input type="text" class="input" id="CustomerAddress" name="CustomerAddress" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="primary-btn">Đăng ký</button>
+                    <button type="reset" class="primary-btn">Làm lại</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer id="footer" class="section section-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer">
+                        <div class="footer-logo">
+                            <a class="logo" href="/">
+                                <img src="/Areas/Admin/Uploads/images/1logoes02265726122018.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="address-info">
+    <div class='display-flex'><div class='address-icon'><i class='fa fa-globe'></i></div><div><span class='address-title'>Địa chỉ:</span> Số 238 Hoàng Quốc Việt - Cầu Giấy - Hà Nội</div></div><div class='display-flex'><div class='address-icon'><i class='fa fa-phone'></i></div><div><span class='address-title'>Hotline:</span> <a href='tel:0849241190'>0849241190</a></div></div><div class='display-flex'><div class='address-icon'><i class='fa fa-envelope'></i></div><div><span class='address-title'>Email:</span> <a href='mailto:cskh@qtcstore.vn'>cskh@qtcstore.vn</a></div></div>
+</div>
+
+                        <div class="clearfix"><br></div>
+
+                        <ul class="footer-social">
+    <li><a href='https://facebook.com' target='_blank'><i class='fa fa-facebook'></i></a></li><li><a href='https://twitter.com' target='_blank'><i class='fa fa-twitter'></i></a></li><li><a href='https://instagram.com' target='_blank'><i class='fa fa-instagram'></i></a></li><li><a href='https://plus.google.com' target='_blank'><i class='fa fa-google'></i></a></li><li><a href='https://pinterest.com' target='_blank'><i class='fa fa-pinterest'></i></a></li>
+</ul>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm visible-xs"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-header">Dịch vụ khách hàng</h3>
+                        <ul class="list-links">
+                            <li><a href="/Home/About">Giới thiệu</a></li>
+                            <li><a href="/Home/Transport">Vận chuyển</a></li>
+                            <li><a href="/Home/Payment">Thanh toán</a></li>
+                            <li><a href="/Home/FAQ">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-header">Đăng ký nhận email mới</h3>
+                        <p>Để không bỏ lỡ bất kỳ sản phẩm hay chương trình khuyến mại mới nào từ chúng tôi!</p>
+                        <form method="POST" action="/Home/EmailRegisted">
+                            <input name="__RequestVerificationToken" type="hidden" value="VloceWrtcWFF7tZ1SvmXZgsGm0jSKcC0F5SvqovtW8iTgPtzZbuDhbh1w1Y_5Fc1cRfxnM1Dky-E1cKhMFonQainP4bQSdj9tR--Yt6luRM1" />
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <input class="input input-email" name="EmailAddress" placeholder="Nhập email của bạn">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button class="primary-btn" type="submit">Đăng ký</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="footer-copyright">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is customized <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://facebook.com/quancoina" target="_blank">QuanKoiNA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Content/js/jquery.flexisel.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/slick.min.js"></script>
+    <script src="Content/js/nouislider.min.js"></script>
+    <script src="Content/js/jquery.zoom.min.js"></script>
+    <script src="Content/js/main.js"></script>
+</body>
+</html>

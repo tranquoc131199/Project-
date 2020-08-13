@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="Content/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/assets/libs/css/style.css">
+    <link rel="stylesheet" href="Content/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="Content/assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
+    <link rel="stylesheet" href="Content/assets/vendor/multi-select/css/multi-select.css">
+    <link rel="shortcut icon" href="Uploads/images/1icons02270526122018.png" />
+    <title>B&#224;i viết giới thiệu</title>
+    <script src="Content/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="Content/ckeditor/ckeditor.js"></script>
+    <script src="Content/ckfinder/ckfinder.js"></script>
+    <link rel="stylesheet" href="Content/assets/libs/css/sweetalert2.min.css">
+    <script src="Content/assets/libs/js/sweetalert2.min.js"></script>
+</head>
+<body>
+    <main class="dashboard-main-wrapper">
+        <header class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="/Admin">
+                    <img src="Uploads/images/1logoes02265726122018.png" class="img-fluid" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <form method="POST" action="/Admin/BackendProduct/Search" id="search-form" enctype="multipart/form-data">
+                                <input name="__RequestVerificationToken" type="hidden" value="CvQYMzrfsyeD7mMevCFrK3ym8wSzBEYqV9wDXL7v2i4Mkl7SSANOyCVGow5aY3qpxpPnmhXJSPvvbW51_G8GysQcXbyZMENiW4orySu-TeA1" />
+                                <div id="custom-search" class="top-search-bar">
+                                    <input class="form-control" id="searchProduct" type="text" name="ProductName" placeholder="Tìm kiếm sản phẩm..">
+                                </div>
+                            </form>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Uploads/images/1adminavatar23295223122018.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">Dư Hồng Qu&#226;n </h5>
+                                    <span class="status"></span><span class="badge-dot badge-success mr-1"></span> Sẵn sàng
+                                </div>
+                                <a class="dropdown-item" href="/Admin/BackendAdmin/Info?AdminId=1"><i class="fas fa-user mr-2"></i>Trang cá nhân</a>
+                                <a class="dropdown-item" href="/Admin/BackendAdmin/Logout"><i class="fas fa-power-off mr-2"></i>Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="/Admin">Bảng điều khiển</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Quản trị
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Admin"><i class="fas fa-fw fa-tachometer-alt"></i> Bảng điều khiển </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-fw fa-users"></i> Nhóm khách hàng </a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendCustomer"><i class="fas fa-fw fa-users"></i> Khách hàng</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendCustomer/Feedback"><i class="fas fa-fw fa-road"></i> Phản hồi</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendCustomer/RegistedEmail"><i class="fas fa-envelope"></i> Email đã đăng ký</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-fw fa-puzzle-piece"></i> Nhóm sản phẩm </a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendBrand"><i class="fas fa-fw fa-building"></i> Hãng sản xuất</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendCategory"><i class="fas fa-fw fa-list"></i> Danh mục sản phẩm</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendProduct"><i class="fas fa-fw fa-lightbulb"></i> Sản phẩm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-paw"></i> Nhóm tin tức </a>
+                                <div id="submenu-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendNew"><i class="fas fa-fw fa-newspaper"></i> Tin tức</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendNew/Catalog"><i class="fas fa-clipboard-list"></i> Danh mục tin tức</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-readme"></i> Nhóm đơn hàng </a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendOrder"><i class="fas fa-fw fa-file-code"></i> Đơn hàng</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendVoucher"><i class="fas fa-fw fa-money-bill-alt"></i> Mã giảm giá</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendTransport"><i class="fas fa-fw fa-truck"></i> Vận chuyển</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendPayment"><i class="fas fa-fw fa-credit-card"></i> Thanh toán</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-divider">
+                                Tính năng
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-cog"></i> Cài đặt </a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendBanner"><i class="fas fa-fw fa-desktop"></i> Banner</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendLogo"><i class="fas fa-fw fa-image"></i> Logo</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendIcon"><i class="fas fa-fw fa-tag"></i> Icon</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-cogs"></i> Nâng cao </a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendAdmin"><i class="fab fa-fw fa-snapchat-ghost"></i> Quản trị viên</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendContact"><i class="fas fa-fw fa-address-book"></i> Liên hệ</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendSocial"><i class="fas fa-fw fa-cubes"></i> Mạng xã hội</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendFaq"><i class="fas fa-fw fa-question"></i> FAQ</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/Admin/BackendIntroduction"><i class="fas fa-fw fa-trophy"></i> Giới thiệu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="abc-bottom"><br /></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+
+        
+
+
+
+        <section class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Trang quản trị QTCStore</h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="/Admin" class="breadcrumb-link">Trang quản trị</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ecommerce-widget">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h3 class="card-header"><b>Thay đổi nội dung</b></h3>
+                                    <div class="card-body">
+                                        <div class="clearfix"><br></div>
+                                        <form method="POST" action="/Admin/BackendIntroduction/Edit">
+                                            <input name="__RequestVerificationToken" type="hidden" value="T_IFw1c90Xi2GvftFxKdxVogoPOnRG7NQts7nzjuP7hPm6mKYv6-UsjW0G0QkOB2M8FICc8WGe72gmWMzmOof8pieFjeoq5d2AtwPmCXy_c1" />
+                                            <div class="form-group">
+                                                <input name="IntroductionId" value="1" type="hidden" />
+                                                <textarea class="form-control" id="IntroductionContent" name="IntroductionContent" rows="3">&lt;p&gt;QTC l&amp;agrave; một trong những doanh nghiệp h&amp;agrave;ng đầu hoạt động trong lĩnh vực kinh doanh c&amp;aacute;c sản phẩm CNTT. Th&amp;agrave;nh lập từ năm 2001 đến nay, c&amp;ocirc;ng ty đ&amp;atilde; tạo được chỗ đứng vững chắc tr&amp;ecirc;n thị trường b&amp;aacute;n bu&amp;ocirc;n, b&amp;aacute;n lẻ, trở th&amp;agrave;nh thương hiệu quen thuộc v&amp;agrave; l&amp;agrave; đối t&amp;aacute;c tin cậy của nhiều bạn h&amp;agrave;ng trong nước v&amp;agrave; Quốc tế.&lt;/p&gt;
+
+                                                    &lt;p&gt;Lu&amp;ocirc;n lấy yếu tố h&amp;agrave;i h&amp;ograve;a về lợi &amp;iacute;ch l&amp;agrave;m nền tảng, l&amp;atilde;nh đạo C&amp;ocirc;ng ty hiểu rằng, niềm tin của kh&amp;aacute;ch h&amp;agrave;ng về gi&amp;aacute; th&amp;agrave;nh, chất lượng v&amp;agrave; dịch vụ l&amp;agrave; sự sống c&amp;ograve;n của C&amp;ocirc;ng ty. Do vậy, mọi hoạt động kinh doanh của C&amp;ocirc;ng ty lu&amp;ocirc;n hướng tới mục ti&amp;ecirc;u t&amp;ocirc;n trọng v&amp;agrave; bảo đảm quyền lợi cho kh&amp;aacute;ch h&amp;agrave;ng, chinh phục kh&amp;aacute;ch h&amp;agrave;ng bằng chất lượng sản phẩm v&amp;agrave; dịch vụ tối ưu&lt;/p&gt;
+
+                                                    &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+                                                    &lt;p&gt;&lt;iframe frameborder=&quot;0&quot; height=&quot;768&quot; src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.657600813899!2d105.78126221469924!3d21.046381985988873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab32dd484c53%3A0x4201b89c8bdfd968!2zMjM4IEhvw6BuZyBRdeG7kWMgVmnhu4d0LCBD4buVIE5odeG6vywgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1555660463769!5m2!1svi!2s&quot; style=&quot;border:0&quot; width=&quot;1024&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+                                                </textarea>
+                                                <script>CKEDITOR.replace('IntroductionContent');</script>
+                                                <script>CKFinder.setupCKEditor(null, 'Content/ckfinder')</script>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-check"></i> Xác nhận</button>
+                                                <button type="reset" class="btn btn-sm btn-danger"><i class="fas fa-retweet"></i> Làm lại</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            Copyright © 2018 QTCStore. All rights reserved customize by <a href="https://facebook.com/quancoina/" target="_blank">QuanKoiNA</a>.
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+    <script src="Content/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="Content/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="Content/assets/vendor/datepicker/moment.js"></script>
+    <script src="Content/assets/vendor/datepicker/tempusdominus-bootstrap-4.js"></script>
+    <script src="Content/assets/vendor/datepicker/datepicker.js"></script>
+    <script src="Content/assets/libs/js/main-js.js"></script>
+</body>
+</html>
